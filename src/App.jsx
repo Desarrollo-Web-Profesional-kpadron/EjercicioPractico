@@ -1,10 +1,14 @@
 import { useState } from "react";
 import CounterButton from "./CounterButton";
-
+import LoginButton from "./LoginButton";
+import LogoutButton from "./LogoutButton";
 
 function App() {
   // Estado compartido 
   const [count, setCount] = useState(0);
+
+  // Estado para login 
+  const [estaLogueado, setEstaLogueado] = useState(false);
 
   const incrementar = () => {
     setCount(count + 1);
@@ -19,8 +23,14 @@ function App() {
       <CounterButton texto="Botón 1" count={count} incrementar={incrementar} />
       <CounterButton texto="Botón 2" count={count} incrementar={incrementar} />
 
-     
+      <hr />
 
+    
+      {estaLogueado ? (
+        <LogoutButton setEstaLogueado={setEstaLogueado} />
+      ) : (
+        <LoginButton setEstaLogueado={setEstaLogueado} />
+      )}
     </div>
   );
 }
