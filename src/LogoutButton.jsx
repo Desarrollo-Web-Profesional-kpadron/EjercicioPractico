@@ -1,6 +1,6 @@
-function LogoutButton({ setEstaLogueado }) {
+function LogoutButton({ setEstaLogueado, className }) {
   return (
-    <button onClick={() => setEstaLogueado(false)}>
+    <button className={className} onClick={() => setEstaLogueado(false)}>
       Cerrar Sesión
     </button>
   );
