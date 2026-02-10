@@ -1,6 +1,6 @@
-function LoginButton({ setEstaLogueado }) {
+function LoginButton({ setEstaLogueado, className }) {
   return (
-    <button onClick={() => setEstaLogueado(true)}>
+    <button className={className} onClick={() => setEstaLogueado(true)}>
       Iniciar Sesión
     </button>
   );

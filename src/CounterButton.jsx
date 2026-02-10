@@ -1,6 +1,6 @@
-function CounterButton({ texto, incrementar }) {
+function CounterButton({ texto, incrementar, className }) {
   return (
-    <button onClick={incrementar} style={{ margin: "10px" }}>
+    <button className={className} onClick={incrementar}>
       {texto}
     </button>
   );
